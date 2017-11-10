@@ -12,6 +12,7 @@ var logger = require('apiconnect-cli-logger/logger.js')
 var env = {
   NODE_ENV: 'production',
   APIMANAGER_CATALOG: '',
+  CONFIG_DIR: './',
   APIMANAGER_PORT: 443,
   APIMANAGER_REFRESH_INTERVAL: 15 * 1000 * 60 };
 
