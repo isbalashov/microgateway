@@ -1,0 +1,23 @@
+# sample_1.0.0.yaml
+#
+info:
+  version: 1.0.0
+  title: sample
+  description: sample laptop yaml
+basePath: /sample
+swagger: '2.0'
+paths:
+  /echo:
+    get:
+      responses:
+        '200':
+          description: 200 OK
+x-ibm-configuration:
+  assembly:
+    execute:
+      - javascript:
+          title: write a small json object
+          source: |
+           message.body = { text : 'Hello World' };
+schemes:
+  - http
