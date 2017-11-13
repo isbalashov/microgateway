@@ -1,5 +1,6 @@
 FROM node:6-alpine
 
+USER 1000
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
@@ -14,5 +15,5 @@ ENV npm_config_registry ${NPM_REGISTRY:-https://registry.npmjs.com}
 RUN npm install --prod --quiet --depth 0
 
 ENV NODE_ENV production
-USER 1000
+
 CMD [ "node", "index.js" ]
